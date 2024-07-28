@@ -60,9 +60,9 @@ const downloadVid = async(link, userId, ctx)=>{
 
         if (fs.existsSync(COOKIES_PATH)) {
             await loadCookies(page);
-            await page.goto(process.env.SITE_NAME, { waitUntil: 'networkidle0' });
             console.log('Login com cookies carregados.');
             ctx.reply('já logado com os cookies.');
+            await page.goto(process.env.SITE_NAME, { waitUntil: 'networkidle0' });
         } else { 
             ctx.reply('não logado ainda. Vamos fazer agora.');
             await login(page, link); 
