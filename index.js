@@ -45,9 +45,11 @@ const login = async(page, link) => {
 const delay = async (ms) => { 
     return new Promise(rsv => setTimeout(rsv,ms));
 }
+ 
+let browser;
 
 const downloadVid = async(link, userId, ctx)=>{
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
         headless: false,
         defaultViewport: null,
         args: ['--start-maximized'],
@@ -106,11 +108,10 @@ const downloadVid = async(link, userId, ctx)=>{
         await browser.close();
     }  
 
-    return 'Retorno da função: ok';
+    //return 'Retorno da função: ok';
 
 } 
 
-//console.log(downloadVid('https://www.xvideos.com/video.ucoptav6bc1/baiano_dotado_arregacando_novinha_do_bairro'));
 bot.start((ctx) => ctx.reply(`Bem-vindo ao bot do ${process.env.SITE_NAME}! Envie um link de vídeo para baixar.`));
 
 bot.on('text', async (ctx) => {
