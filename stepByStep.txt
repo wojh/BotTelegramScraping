@@ -45,3 +45,13 @@ O bot já faz download do vídeo. Agora vamos oferecer as opções de download e
 
 Para isso, primeiro é necessário colocar o bot no servidor ?
 Lembrando que vamos usar o firebase como DB.
+
+================
+
+29/7
+
+fizemos o push pro github.
+
+Ainda resta o sistema de pontos e a integração com o MP.
+
+Feito isso precisamos limpar o script: não ta atendendo mais de uma solicitação simultaneamente
